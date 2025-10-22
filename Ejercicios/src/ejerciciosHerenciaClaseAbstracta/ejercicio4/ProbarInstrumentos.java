@@ -1,0 +1,26 @@
+package ejerciciosHerenciaClaseAbstracta.ejercicio4;
+
+import java.util.ArrayList;
+
+public class ProbarInstrumentos {
+
+    public static void main(String[] args) {
+        Guitarra guido =new Guitarra("guido", "Gordas");
+        System.out.println(guido.emitirSonido());
+
+        Bateria bataca =new Bateria("bataca", 3);
+        System.out.println(bataca.emitirSonido());
+
+        Flauta ham =new Flauta("ham", "Madera");
+        System.out.println(ham.emitirSonido());
+
+        ArrayList<InstrumentoMusical> instrumentos = new ArrayList<>();
+        instrumentos.add(guido);
+        instrumentos.add(bataca);
+        instrumentos.add(ham);
+
+        for (InstrumentoMusical inst : instrumentos) {
+            System.out.println(inst.emitirSonido());
+        }
+    }
+}
