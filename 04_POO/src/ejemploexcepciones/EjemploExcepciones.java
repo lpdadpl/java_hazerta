@@ -8,7 +8,7 @@ public class EjemploExcepciones {
             numeros[4] = 5;
 
         } catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("error: "+e.toString());
+            System.out.println("se ha encontrado un error: "+e.toString());
         }
         System.out.println(numeros[0]);
         System.out.println("ultima linea");
