@@ -14,10 +14,17 @@ public class ProbarInstrumentos {
         Flauta ham =new Flauta("ham", "Madera");
         System.out.println(ham.emitirSonido());
 
+        InstrumentoMusical molon = new Flauta();
+        Flauta f2 = (Flauta) molon;
+        InstrumentoMusical prueba = new Guitarra();
+        Guitarra g2= (Guitarra) prueba;
+
         ArrayList<InstrumentoMusical> instrumentos = new ArrayList<>();
         instrumentos.add(guido);
         instrumentos.add(bataca);
         instrumentos.add(ham);
+        instrumentos.add(molon);
+
 
         for (InstrumentoMusical inst : instrumentos) {
             System.out.println(inst.emitirSonido());
