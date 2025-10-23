@@ -1,6 +1,10 @@
 package ejemplointerface;
 
 public class Avion extends Vehiculo implements ObjetoVolador{
+
+    public Avion() {
+    }
+
     @Override
     public String volar() {
         return "el avion esta volando";

@@ -2,6 +2,11 @@ package ejemplointerface;
 
 public class HidroAvion extends Vehiculo implements Nautico, ObjetoVolador {
 
+    public HidroAvion() {
+    }
+
+
+
     @Override
     public String atracar() {
         return "Hidroavion atracado";
