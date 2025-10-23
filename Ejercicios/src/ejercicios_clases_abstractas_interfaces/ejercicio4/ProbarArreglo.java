@@ -19,5 +19,8 @@ public class ProbarArreglo {
         tp2.repararCoche();
         tm.repararCoche();
         tm2.repararCoche();
+
+
+        System.out.println("hola");
     }
 }
