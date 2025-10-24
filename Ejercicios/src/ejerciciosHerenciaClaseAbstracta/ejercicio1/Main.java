@@ -31,6 +31,7 @@ public class Main {
         LocalDate FechaCaducidadpp3 = LocalDate.of(2025, 11, 06);
 
         ProductoPerecedero pp3 = new ProductoPerecedero("Producto",5, 34, FechaFabricacionpp3, FechaCaducidadpp3);
-        System.out.println("Dias desde la fabricacion:" +pp2.tiempoFabricacion());
+        System.out.println("Dias desde la fabricacion: " +pp2.tiempoFabricacion());
+        System.out.println("Dias desde la fabricacion del tercer producto: "+ pp3.tiempoFabricacion());
     }
 }

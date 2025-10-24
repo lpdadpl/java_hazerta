@@ -43,7 +43,7 @@ public class ProductoPerecedero extends Producto {
     }
     public int tiempoFabricacion(){
         if (fFabricacion != null & LocalDate.now().isAfter((fFabricacion))) {
-            return (int) ChronoUnit.DAYS.between(LocalDate.now(), fFabricacion);
+            return (int) ChronoUnit.DAYS.between(fFabricacion, LocalDate.now());
         }else{
             System.out.println("El producto al que hace referencia no ha sido fabricado");
             return 0;

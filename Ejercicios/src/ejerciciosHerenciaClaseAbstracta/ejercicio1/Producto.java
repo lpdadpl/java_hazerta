@@ -1,6 +1,6 @@
 package ejerciciosHerenciaClaseAbstracta.ejercicio1;
 
-public class Producto {
+ public class Producto {
     protected String nombre;
     protected int cantidad;
     protected double pvp;
