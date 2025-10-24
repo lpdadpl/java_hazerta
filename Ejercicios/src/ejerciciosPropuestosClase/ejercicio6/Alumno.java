@@ -4,15 +4,15 @@ package ejerciciosPropuestosClase.ejercicio6;
 
 public class Alumno {
     private String nombreCompleto;
-    private double[] parciales; // matriz = array unidimensional en este caso
+    private double[] parciales;
 
-    //todo Constructor
+
     public Alumno(String nombreCompleto, int cantidadParciales) {
         this.nombreCompleto = nombreCompleto;
         this.parciales = new double[cantidadParciales];
     }
 
-    //todo Propiedad de escritura → asignar nota a un parcial
+
     public void setParcial(int indice, double nota) {
         if (indice >= 0 && indice < parciales.length) {
             parciales[indice] = nota;
@@ -21,7 +21,6 @@ public class Alumno {
         }
     }
 
-    //todo Método para calcular promedio
     public double calcularPromedio() {
         double suma = 0;
         for (double nota : parciales) {
@@ -30,7 +29,7 @@ public class Alumno {
         return suma / parciales.length;
     }
 
-    //todo Método para mostrar calificaciones
+
     public void mostrarCalificaciones() {
         System.out.println("Calificaciones de " + nombreCompleto + ":");
         for (int i = 0; i < parciales.length; i++) {
@@ -38,7 +37,7 @@ public class Alumno {
         }
     }
 
-    //todo Método opcional para mostrar todo directamente
+
     public void mostrarResultadoFinal() {
         mostrarCalificaciones();
         System.out.println("Promedio final: " + calcularPromedio());
