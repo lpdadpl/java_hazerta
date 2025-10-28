@@ -18,9 +18,9 @@ public class Inicio
                 System.out.println(p.toString());
             }
         } catch (ClassNotFoundException e){
-            System.out.println(e.toString());
-        } catch (SQLException e) {
             throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e.toString() );
         }
     }
 }
