@@ -24,4 +24,10 @@ public class Connection {
         }
     }
 
+    public void cerrarConexion() throws SQLException {
+        if (myConnection != null && !myConnection.isClosed()) {
+            myConnection.close();
+            System.out.println("Conexión cerrada con éxito.");
+        }
+    }
 }
