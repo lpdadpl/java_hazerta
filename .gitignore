@@ -1,9 +1,9 @@
 #########################################
 ### IntelliJ IDEA (lo importante)     ###
 #########################################
-.idea/            # Carpeta de configuración del proyecto
-*.iml            # Archivos de módulo de IntelliJ
-out/             # Carpeta de compilados (NO se sube)
+.idea/
+*.iml
+out/
 
 #########################################
 ### Eclipse ###
