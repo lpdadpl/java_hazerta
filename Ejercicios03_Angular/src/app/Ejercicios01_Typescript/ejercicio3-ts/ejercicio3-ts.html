@@ -1,5 +1,7 @@
 <p>Introduzca el número para comprobar si es impar:</p>
 <div>
   <input class="input" type="number" #numeroInput (change)="checkNumber(+numeroInput.value)" />
-  <button (click)="checkNumber(+numeroInput.value)">Comprobar</button>
+  <button class="border cursor-pointer bg-gray-200 p-0.5" (click)="checkNumber(+numeroInput.value)">
+    Comprobar
+  </button>
 </div>

@@ -8,15 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Ejercicio4Ts {
 
+  mensaje!: string
+
   checkEdad(edad: any): void {
     const edadNum = Number(edad);
-
-
+    let mensaje: string;
 
     if (edadNum >= 18) {
       console.log(`Edad: ${edadNum} - ¡Eres mayor de edad!`);
+      mensaje =  "¡Eres mayor de edad!";
     } else {
       console.log(`Edad: ${edadNum} - Eres menor de edad`);
+      mensaje = "Eres menor de edad";
     }
   }
 }

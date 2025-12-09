@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 export class Ejercicio1 {
 
   titulo: string = "Ejercicio 1: Creacion de componentes"
-  parrafo: string = "blabla blabla blablablabla blablablabla blablabla bla blabla blabla blabla"
+  parrafo: string = "bla blablabla blabla"
 
 }

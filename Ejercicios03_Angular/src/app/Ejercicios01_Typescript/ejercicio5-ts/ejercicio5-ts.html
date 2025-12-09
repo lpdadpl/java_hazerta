@@ -1,1 +1,26 @@
-<p>ejercicio5-ts works!</p>
+<form [formGroup]="Formulario" (ngSubmit)="onSubmit()" action="">
+  <select class="border border-collapse p-1" formControlName="estado">
+    <option [ngValue]="null" disabled>--Elige una opción--</option>
+    <option value="Recibido">Recibido</option>
+    <option value="En transito">En tránsito</option>
+    <option value="Entregado">Entregado</option>
+  </select>
+
+  <button
+    class="border border-collapse p-0.5 mx-2 bg-gray-200 hover:bg-gray-500 hover:text-cyan-50"
+    type="submit"
+    [disabled]="Formulario.invalid"
+  >
+    Actualizar estado
+  </button>
+
+  <br />
+
+  <p>
+    Estado capturado: <strong>{{ estado || 'N/A' }}</strong>
+  </p>
+
+  <p *ngIf="mensaje">
+    Mensaje: <strong>{{ mensaje }}</strong>
+  </p>
+</form>
