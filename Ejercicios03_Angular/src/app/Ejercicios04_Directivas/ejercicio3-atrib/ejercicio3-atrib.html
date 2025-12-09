@@ -1,1 +1,7 @@
-<p>ejercicio3-atrib works!</p>
+<div *ngIf="estaAutenticado; else noAutenticado">
+  <h2>Bienvenido</h2>
+</div>
+
+<ng-template #noAutenticado>
+  <p>Por favor, inicia sesión</p>
+</ng-template>

@@ -1,3 +1,7 @@
-<button changeActivo()>Cambiar estado</button>
-
-<div id="changer" [ngStyle]="{'background-color': esActivo ? 'green' : 'red'}"></div>
+<button class="border rounded bg-gray-400 cursor-pointer" changeActivo()>Cambiar estado</button>
+<br />
+<div
+  id="changer"
+  class="w-6 h-6 mt-3 rounded"
+  [ngStyle]="{ 'background-color': esActivo ? 'green' : 'red' }"
+></div>

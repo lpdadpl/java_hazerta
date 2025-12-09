@@ -1,1 +1,15 @@
-<p>ejercicio2-atrib works!</p>
+<div class="status-container">
+  <div
+    class="status-display"
+    [ngClass]="{
+      active: status === 'activo',
+      inactive: status === 'inactivo'
+    }"
+  >
+    Estado Actual: <strong>{{ status | uppercase }}</strong>
+  </div>
+
+  <button class="border rounded cursor-pointer p-0.5" (click)="toggleStatus()">
+    Cambiar Estado
+  </button>
+</div>

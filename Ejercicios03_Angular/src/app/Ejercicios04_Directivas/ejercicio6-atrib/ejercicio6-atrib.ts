@@ -28,7 +28,7 @@ export class Ejercicio6Atrib {
     Discos Duro : ${this.discoDuro}
     Fuente de Alimentacion : ${this.fuenteAlimentacion}
     `
-    alert(mensajes);
+    console.log(mensajes);
   }
 
 
