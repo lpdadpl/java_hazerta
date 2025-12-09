@@ -1,0 +1,45 @@
+@if (usuario) {
+  <div class="history-container">
+    <h2 class="history-title">🛒 Historial de Compras</h2>
+
+    @if (usuario.compras && usuario.compras.length > 0) {
+      <div class="history-content">
+        @for (compra of usuario.compras; track compra.id) {
+          <div class="purchase-card">
+            <div class="purchase-header">
+              <div class="purchase-info">
+                <span class="purchase-id">Pedido #{{ compra.id }}</span>
+                <span class="purchase-date">{{ compra.fecha }}</span>
+              </div>
+              <span class="purchase-status" [ngClass]="compra.estado === 'Completado' ? 'status-completed' : 'status-processing'">
+                {{ compra.estado }}
+              </span>
+            </div>
+            <div class="purchase-items">
+              @for (item of compra.items; track item.nombre) {
+                <div class="purchase-item">
+                  <span class="item-name">{{ item.nombre }}</span>
+                  <span class="item-quantity">x{{ item.cantidad }}</span>
+                  <span class="item-price">€{{ item.precio.toFixed(2) }}</span>
+                </div>
+              }
+            </div>
+            <div class="purchase-footer">
+              <span class="total-label">Total:</span>
+              <span class="total-amount">€{{ compra.total.toFixed(2) }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="history-content">
+        <p class="no-purchases">No hay compras registradas para este usuario.</p>
+      </div>
+    }
+  </div>
+} @else {
+  <div class="history-container">
+    <p>Cargando historial de compras...</p>
+  </div>
+}
+

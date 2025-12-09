@@ -1,0 +1,95 @@
+@if (usuario) {
+  <div class="settings-container">
+    <h2 class="settings-title">⚙️ Configuración</h2>
+
+    <div class="settings-content">
+      <div class="settings-section">
+        <h3 class="section-title">Preferencias de Notificaciones</h3>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Notificaciones por Email</label>
+            <span class="setting-description">Recibe actualizaciones importantes por correo electrónico</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="usuario.notificacionesEmail" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Notificaciones Push</label>
+            <span class="setting-description">Recibe notificaciones en tiempo real</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="usuario.notificacionesPush" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Boletín de Noticias</label>
+            <span class="setting-description">Recibe ofertas especiales y novedades</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="usuario.boletinNoticias" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h3 class="section-title">Privacidad y Seguridad</h3>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Perfil Público</label>
+            <span class="setting-description">Permite que otros usuarios vean tu perfil</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="usuario.perfilPublico" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Autenticación de Dos Factores</label>
+            <span class="setting-description">Añade una capa extra de seguridad a tu cuenta</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" [checked]="usuario.autenticacionDosFactores" disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h3 class="section-title">Idioma y Región</h3>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Idioma</label>
+            <span class="setting-description">Selecciona tu idioma preferido</span>
+          </div>
+          <select class="setting-select" [value]="usuario.idioma" disabled>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+        <div class="setting-item">
+          <div class="setting-info">
+            <label class="setting-label">Zona Horaria</label>
+            <span class="setting-description">Selecciona tu zona horaria</span>
+          </div>
+          <select class="setting-select" [value]="usuario.zonaHoraria" disabled>
+            <option value="Europe/Madrid">Europe/Madrid (GMT+1)</option>
+            <option value="UTC">UTC (GMT+0)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="settings-container">
+    <p>Cargando configuración del usuario...</p>
+  </div>
+}
+

@@ -1,0 +1,57 @@
+@if (usuario) {
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="avatar">
+        <span class="avatar-icon">👤</span>
+      </div>
+      <h2 class="profile-title">Mi Perfil</h2>
+    </div>
+
+    <div class="profile-content">
+      <div class="info-section">
+        <h3 class="section-title">Información Personal</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <label class="info-label">Nombre:</label>
+            <span class="info-value">{{ usuario.nombre }}</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">Email:</label>
+            <span class="info-value">{{ usuario.email }}</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">Teléfono:</label>
+            <span class="info-value">{{ usuario.telefono }}</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">Fecha de Nacimiento:</label>
+            <span class="info-value">{{ usuario.fechaNacimiento }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3 class="section-title">Dirección</h3>
+        <div class="info-grid">
+          <div class="info-item full-width">
+            <label class="info-label">Calle:</label>
+            <span class="info-value">{{ usuario.calle }}</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">Ciudad:</label>
+            <span class="info-value">{{ usuario.ciudad }}</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">Código Postal:</label>
+            <span class="info-value">{{ usuario.codigoPostal }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="profile-container">
+    <p>Cargando información del usuario...</p>
+  </div>
+}
+
