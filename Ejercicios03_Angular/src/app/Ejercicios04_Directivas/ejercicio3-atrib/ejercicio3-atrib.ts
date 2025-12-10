@@ -12,4 +12,8 @@ export class Ejercicio3Atrib {
 
   estaAutenticado: boolean = true;
 
+  cambioEstado(){
+    this.estaAutenticado =! this.estaAutenticado;
+    console.log(this.estaAutenticado)
+  }
 }

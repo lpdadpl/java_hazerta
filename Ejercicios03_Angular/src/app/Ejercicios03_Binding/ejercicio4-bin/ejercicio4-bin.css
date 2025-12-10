@@ -1,6 +1,5 @@
 div{
+    justify-items: center;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-justify: center;
+    justify-self: center;
 }
