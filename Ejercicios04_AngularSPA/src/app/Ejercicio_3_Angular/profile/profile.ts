@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserDataService, User } from '../user-data.service';
 import { CommonModule } from '@angular/common';
+import { AllBackButton } from '../../all-back-button/all-back-button';
+import { BackHome } from '../back-home/back-home';
 
 @Component({
     selector: 'app-profile',

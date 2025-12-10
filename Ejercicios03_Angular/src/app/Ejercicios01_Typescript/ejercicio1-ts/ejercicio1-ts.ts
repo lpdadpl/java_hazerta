@@ -8,13 +8,20 @@ import { Component } from '@angular/core';
 })
 export class Ejercicio1Ts {
 
-  texto: string = 'Hola, este es el primer ejercicio de TypeScript en Angular';
-  numero: number = 67;
-  booleano: boolean = true;
-  nulo: null = null;
-  indefinido: undefined = undefined;
+  texto!: string
+  numero!: number
+  booleano!: boolean
+  nulo!: null
+  indefinido!: undefined
+
 
   imprimirValores(): void {
+    this.texto = 'Hola, este es el primer ejercicio de TypeScript en Angular';
+    this.numero = 67;
+    this.booleano = true;
+    this.nulo = null;
+    this.indefinido = undefined;
+
     console.log('Texto:', this.texto);
     console.log('Número:', this.numero);
     console.log('Booleano:', this.booleano);

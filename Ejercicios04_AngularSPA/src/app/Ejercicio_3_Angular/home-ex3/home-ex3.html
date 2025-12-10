@@ -1,15 +1,6 @@
 <section id="servicios" class="h-screen bg-blue-300 flex flex-col items-center text-center">
   <h2 class="text-4xl md:text-5xl font-bold text-gray-600 mb-10 m-5">Usuarios</h2>
   
-  <div class="mb-8">
-    <a
-      [routerLink]="['/cuenta-usuario']"
-      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200 transform hover:-translate-y-1"
-    >
-      👤 Ir a Mi Cuenta de Usuario
-    </a>
-  </div>
-
   <div class="flex flex-wrap justify-center">
     @for (usuario of usuarios; track usuario.id) {
       <a

@@ -1,4 +1,4 @@
-<div class="bg-gray-300 flex items-start justify-center min-h-screen">
+<!-- <div class="bg-gray-300 flex items-start justify-center min-h-screen">
   <div class="w-full max-w-6xl bg-white shadow-2xl rounded-lg p-8 mt-5">
     <h1 class="text-3xl font-extrabold text-custom-blue mb-8 text-center border-b pb-4">
       Gestión de Cuenta de Usuario
@@ -11,27 +11,27 @@
           <a
             [routerLink]="['./profile']"
             routerLinkActive="bg-blue-600 text-white shadow-md"
-            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500 hover:text-white transition duration-200 flex items-center group"
+            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500  transition duration-200 flex items-center group"
           >
-            <span class="text-xl mr-3 group-hover:text-white">👤</span>
+            <span class="text-xl mr-3 ">👤</span>
             Perfil
           </a>
 
           <a
             [routerLink]="['./settings']"
             routerLinkActive="bg-blue-600 text-white shadow-md"
-            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500 hover:text-white transition duration-200 flex items-center group"
+            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500  transition duration-200 flex items-center group"
           >
-            <span class="text-xl mr-3 group-hover:text-white">⚙️</span>
+            <span class="text-xl mr-3 ">⚙️</span>
             Configuración
           </a>
 
           <a
             [routerLink]="['./history']"
             routerLinkActive="bg-blue-600 text-white shadow-md"
-            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500 hover:text-white transition duration-200 flex items-center group"
+            class="w-full p-3 rounded-lg text-left font-medium text-gray-800 bg-gray-50 hover:bg-blue-500  transition duration-200 flex items-center group"
           >
-            <span class="text-xl mr-3 group-hover:text-white">🛒</span>
+            <span class="text-xl mr-3 ">🛒</span>
             Historial de Compras
           </a>
         </div>
@@ -43,6 +43,67 @@
         </h2>
         <router-outlet></router-outlet>
       </main>
+    </div>
+  </div>
+</div>
+ -->
+<div class="min-h-screen flex items-start justify-center bg-gray-100 ">
+  <div class="w-full max-w-6xl bg-white  rounded-xl shadow-xl p-6 mt-4">
+
+    <h1 class="text-3xl font-bold text-center mb-6 pb-4 border-b">
+      Gestión de Cuenta de Usuario
+    </h1>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+
+      <!-- Navegación -->
+      <nav class="lg:w-1/4 p-4 border-b lg:border-b-0 lg:border-r border-gray-300">
+        <h2 class="text-xl font-semibold mb-4">Navegación</h2>
+
+        <div class="space-y-3">
+
+          <a
+            [routerLink]="['./profile']"
+            routerLinkActive="bg-blue-600 shadow"
+            class="flex items-center p-3 rounded-lg bg-gray-100  hover:bg-blue-500"
+          >
+            <span class="text-xl mr-3">👤</span>
+            Perfil
+          </a>
+
+          <a
+            [routerLink]="['./settings']"
+            routerLinkActive="bg-blue-600 shadow"
+            class="flex items-center p-3 rounded-lg bg-gray-100  hover:bg-blue-500"
+          >
+            <span class="text-xl mr-3">⚙️</span>
+            Configuración
+          </a>
+
+          <a
+            [routerLink]="['./history']"
+            routerLinkActive="bg-blue-600 shadow"
+            class="flex items-center p-3 rounded-lg bg-gray-100 mb-5 hover:bg-blue-500 "
+          >
+            <span class="text-xl mr-3">🛒</span>
+            Historial de Compras
+          </a>
+          
+        </div>
+        <app-all-back-button></app-all-back-button>
+      </nav>
+
+      <!-- Contenido -->
+      <main class="lg:w-3/4 p-4">
+        <div class=" flex text-2xl font-semibold mb-4 pb-2 border-b space-x-100">
+        <h2 class="">
+          Contenido de la Sección
+        </h2>
+        <app-back-home></app-back-home>
+        </div>
+        <router-outlet></router-outlet>
+      </main>
+
     </div>
   </div>
 </div>
